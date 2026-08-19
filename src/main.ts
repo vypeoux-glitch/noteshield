@@ -67,12 +67,14 @@ export default class NoteShieldPlugin extends Plugin {
 		}
 	}
 
-	async onunload(): Promise<void> {
+	onunload(): void {
 		// Views are unregistered by Obsidian; nothing else holds resources.
 	}
 
 	async loadSettings(): Promise<void> {
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+		// loadData() jest typu `any` — zawężamy, zanim cokolwiek trafi do ustawień
+		const zapisane = (await this.loadData()) as Partial<NoteShieldSettings> | null;
+		this.settings = { ...DEFAULT_SETTINGS, ...(zapisane ?? {}) };
 	}
 
 	async saveSettings(): Promise<void> {
@@ -145,7 +147,7 @@ export default class NoteShieldPlugin extends Plugin {
 		}
 		const view = leaf.view;
 		if (view instanceof NoteShieldView) view.setSummary(summary);
-		workspace.revealLeaf(leaf);
+		await workspace.revealLeaf(leaf);
 	}
 
 	private async exportReport(): Promise<void> {

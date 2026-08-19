@@ -89,7 +89,7 @@ export class NoteShieldView extends ItemView {
 
 		for (const file of this.summary.files) {
 			const section = container.createDiv({ cls: 'noteshield-file' });
-			section.createEl('div', { cls: 'noteshield-file-path', text: file.path });
+			section.createDiv({ cls: 'noteshield-file-path', text: file.path });
 			for (const finding of file.findings) {
 				const row = section.createDiv({ cls: 'noteshield-finding' });
 				row.createSpan({

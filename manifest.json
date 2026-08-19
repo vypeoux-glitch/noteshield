@@ -1,8 +1,8 @@
 {
 	"id": "noteshield",
 	"name": "NoteShield",
-	"version": "0.1.0",
-	"minAppVersion": "1.6.0",
+	"version": "0.1.1",
+	"minAppVersion": "1.7.2",
 	"description": "Finds sensitive data in your vault — national identifiers, bank accounts, cards, API keys — with checksum validation, fully offline.",
 	"author": "Yzukar",
 	"authorUrl": "https://github.com/vypeoux-glitch",
