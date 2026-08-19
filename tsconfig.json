@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "ESNext",
+		"target": "ES2022",
+		"allowJs": true,
+		"noImplicitAny": true,
+		"moduleResolution": "bundler",
+		"importHelpers": true,
+		"isolatedModules": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"verbatimModuleSyntax": true,
+		"strictNullChecks": true,
+		"strict": true,
+		"lib": ["DOM", "ES2022"]
+	},
+	"include": ["src/**/*.ts"]
+}

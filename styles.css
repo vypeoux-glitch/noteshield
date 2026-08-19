@@ -1,0 +1,18 @@
+.noteshield-panel { padding: 0 12px 16px; }
+.noteshield-header h3 { margin-bottom: 4px; }
+.noteshield-counts { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+.noteshield-chip { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--background-modifier-border); }
+.noteshield-chip.noteshield-critical { background: var(--color-red); color: var(--text-on-accent); }
+.noteshield-chip.noteshield-high { background: var(--color-orange); color: var(--text-on-accent); }
+.noteshield-file { margin-bottom: 14px; }
+.noteshield-file-path { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; word-break: break-all; }
+.noteshield-finding { display: flex; align-items: baseline; gap: 6px; padding: 3px 4px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.noteshield-finding:hover { background: var(--background-modifier-hover); }
+.noteshield-dot.noteshield-critical { color: var(--color-red); }
+.noteshield-dot.noteshield-high { color: var(--color-orange); }
+.noteshield-dot.noteshield-medium { color: var(--color-yellow); }
+.noteshield-dot.noteshield-low { color: var(--text-faint); }
+.noteshield-rule { font-weight: 500; }
+.noteshield-excerpt { font-family: var(--font-monospace); color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.noteshield-line { color: var(--text-faint); margin-left: auto; }
+.noteshield-settings-intro { color: var(--text-muted); font-size: 13px; }
